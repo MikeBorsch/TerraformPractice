@@ -9,8 +9,16 @@ terraform {
   required_version = ">= 1.2.0"
 }
 
-provider "aws" {
+provider "aws" { #platform
   region = "us-east-1"
+}
+
+resource "aws_s3_bucket" "my_bucket" {
+  bucket = "my_cool_bucket"
+
+  tags = {
+    Name = "TheBucketOfCats"
+  }
 }
 
 resource "aws_instance" "app_server" {
