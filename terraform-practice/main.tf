@@ -17,7 +17,7 @@ resource "aws_s3_bucket" "my_bucket" {
   bucket = "my_cool_bucket"
 
   tags = {
-    Name = "The-Bucket-Of-Sky-Moons"
+    Name = "The-Bucket-Of-Sky-Moons-and-Spoopy-B"
   }
 }
 
