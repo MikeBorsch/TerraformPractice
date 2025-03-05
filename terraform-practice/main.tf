@@ -14,7 +14,7 @@ provider "aws" { #platform
 }
 
 resource "aws_s3_bucket" "my_bucket" {
-  bucket = "The-Sky-Spoopy-Bucket"
+  bucket = "the-sky-spoopy-bucket"
 
   tags = {
     Name = "TheAwesomeCatBucket"
