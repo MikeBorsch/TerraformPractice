@@ -17,7 +17,7 @@ resource "aws_s3_bucket" "my_bucket" {
   bucket = "my_cool_bucket"
 
   tags = {
-    Name = "TheBucketOfCats"
+    Name = "TheBucketOfCats668497"
   }
 }
 
