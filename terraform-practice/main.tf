@@ -14,10 +14,10 @@ provider "aws" { #platform
 }
 
 resource "aws_s3_bucket" "my_bucket" {
-  bucket = "my_cool_bucket"
+  bucket = "The-Sky-Spoopy-Bucket"
 
   tags = {
-    Name = "The-Bucket-Of-Sky-Moons-and-Spoopy-B"
+    Name = "TheAwesomeCatBucket"
   }
 }
 
