@@ -19,15 +19,15 @@ provider "aws" { #platform
   region = "us-east-1"
 }
 
-/*resource "aws_s3_bucket" "my_bucket" {
+resource "aws_s3_bucket" "my_bucket" {
   bucket = "the-sky-spoopy-bucket"
 
   tags = {
     Name = "TheAwesomeCatBucket"
   }
 }
-*/
 
+/*
 resource "aws_instance" "app_server" {
   ami           = "ami-014d544cfef21b42d"
   instance_type = "t2.micro"
@@ -36,3 +36,4 @@ resource "aws_instance" "app_server" {
     Name = var.instance_name
   }
 }
+*/
