@@ -1,4 +1,4 @@
-/*
+
 provider "aws" {
   region = "us-east-1"
 }
@@ -98,4 +98,3 @@ output "s3_buckets" {
 output "ec2_instance_ips" {
   value = [aws_instance.web1.public_ip, aws_instance.web2.public_ip]
 }
-*/
