@@ -1,7 +1,7 @@
 
 provider "aws" {
   region = "us-east-1"
-  alias = "east"
+  alias  = "east"
 }
 
 # VPC
@@ -10,9 +10,9 @@ resource "aws_vpc" "main" {
 }
 
 resource "aws_subnet" "subnet_a" {
-  vpc_id                  = aws_vpc.main.id
-  cidr_block              = "10.0.1.0/24"
-  availability_zone       = "us-east-1a"
+  vpc_id            = aws_vpc.main.id
+  cidr_block        = "10.0.1.0/24"
+  availability_zone = "us-east-1a"
 }
 
 # Security Group
@@ -69,10 +69,10 @@ resource "aws_iam_instance_profile" "ec2_profile" {
 
 # EC2 Instances
 resource "aws_instance" "web1" {
-  ami           = "ami-0c55b159cbfafe1f0" # Amazon Linux 2 AMI
-  instance_type = "t2.micro"
-  subnet_id     = aws_subnet.subnet_a.id
-  security_groups = [aws_security_group.instance_sg.name]
+  ami                  = "ami-0c55b159cbfafe1f0" # Amazon Linux 2 AMI
+  instance_type        = "t2.micro"
+  subnet_id            = aws_subnet.subnet_a.id
+  security_groups      = [aws_security_group.instance_sg.name]
   iam_instance_profile = aws_iam_instance_profile.ec2_profile.name
 
   tags = {
@@ -81,10 +81,10 @@ resource "aws_instance" "web1" {
 }
 
 resource "aws_instance" "web2" {
-  ami           = "ami-0c55b159cbfafe1f0"
-  instance_type = "t2.micro"
-  subnet_id     = aws_subnet.subnet_a.id
-  security_groups = [aws_security_group.instance_sg.name]
+  ami                  = "ami-0c55b159cbfafe1f0"
+  instance_type        = "t2.micro"
+  subnet_id            = aws_subnet.subnet_a.id
+  security_groups      = [aws_security_group.instance_sg.name]
   iam_instance_profile = aws_iam_instance_profile.ec2_profile.name
 
   tags = {
